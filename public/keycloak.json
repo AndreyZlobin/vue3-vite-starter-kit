@@ -1,0 +1,7 @@
+{
+  "realm": "master",
+  "auth-server-url": "http://1docz-s-app01.gk.rosatom.local:8080/auth",
+  "resource": "test",
+  "public-client": true,
+  "confidential-port": 0
+}

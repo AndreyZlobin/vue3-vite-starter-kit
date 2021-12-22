@@ -1,0 +1,248 @@
+$amelie:#FFFFFF;
+$arrival:#E4EDFB;
+$--rir-rocky:#3D75E4;
+$--rir-arrival: #E4EDFB;
+.rir-calendar {
+  margin-bottom: 60px;
+}
+
+.rir-calendar-month {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+
+  & > #weekdays {
+    width: 100%;
+    display: flex;
+    background-color: $amelie;
+    border: 1px solid $arrival;
+
+    & > div {
+      width: calc(100% / 7);
+      padding: 8px;
+      text-align: center;
+      color: $--rir-rocky;
+      font-size: 10px;
+      line-height: 12px;
+      border-right: 1px solid $--rir-arrival;
+
+      &:last-child {
+        border: none
+      }
+    }
+  }
+
+  &__calendar {
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: $amelie;
+    border-left: 1px solid $--rir-arrival;
+  }
+
+  &__day {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 144px;
+    width: calc(100% / 7);
+    border-bottom: 1px solid $--rir-arrival;
+    border-right: 1px solid $--rir-arrival;
+
+    &.day-prev-month,
+    &.day-next-month {
+      opacity: 0.48;
+    }
+  }
+
+  &__title {
+    width: 100%;
+    padding: 4px 0 0;
+    display: flex;
+    justify-content: center;
+
+    & > span {
+      font-size: 16px;
+      line-height: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 32px;
+      width: 32px;
+      border-radius: 50%;
+
+      &.now {
+        background-color: var(--rir-rocky);
+        color: var(--rir-amelie);
+      }
+    }
+  }
+}
+
+.rir-calendar-week {
+  display: flex;
+  flex-wrap: nowrap;
+  border-top: 1px solid var(--rir-arrival);
+  border-bottom: 1px solid var(--rir-arrival);
+
+  &__day {
+    width: calc(100% / 7);
+    background-color: var(--rir-amelie);
+    border-left: 1px solid var(--rir-arrival);
+
+    &:last-child {
+      border-right: 1px solid var(--rir-arrival);
+    }
+
+    & > span {
+      color: var(--rir-rocky);
+      border-bottom: 1px solid var(--rir-arrival);
+      opacity: .48;
+      width: 100%;
+      display: block;
+      text-align: center;
+      font-size: 10px;
+      line-height: 12px;
+      padding: 8px 16px;
+    }
+  }
+
+  &__content {
+    width: 100%;
+    padding: 16px 6px;
+  }
+}
+
+.rir-calendar-quarter {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.block-calendar {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: var(--rir-amelie);
+  border: 1px solid var(--rir-arrival);
+  border-right: none;
+
+  &.quarter {
+    width: calc((100% - 56px) / 3);
+    margin-right: 14px;
+    margin-left: 14px;
+
+    &:first-child {
+      margin-left: 0;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &.year {
+    width: calc((100% - 60px) / 4);
+    margin-right: 10px;
+    margin-left: 10px;
+    margin-bottom: 20px;
+
+    &:first-child,
+    &:nth-child(5n+ 5) {
+      margin-left: 0;
+    }
+
+    &:nth-child(4n+4) {
+      margin-right: 0;
+    }
+
+    & .block-calendar__day {
+      height: 44px;
+    }
+
+    & .block-calendar__day-num {
+      & > span {
+        font-size: 13px;
+        line-height: 16px;
+        padding: 6px 4px;
+      }
+    }
+  }
+
+  &__month {
+    font-size: 10px;
+    line-height: 12px;
+    color: var(--rir-rocky);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid var(--rir-arrival);
+    border-right: 1px solid var(--rir-arrival);
+    height: 28px;
+  }
+
+  &__weeks {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 28px;
+    border-bottom: 1px solid var(--rir-arrival);
+
+    & > span {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: calc(100% / 7);
+      font-size: 10px;
+      line-height: 12px;
+      color: var(--rir-rocky);
+      border-right: 1px solid var(--rir-arrival);
+      height: 100%;
+    }
+  }
+
+  &__calendar {
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: var(--rir-amelie);
+  }
+
+  &__day {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 69px;
+    width: calc(100% / 7);
+    border-bottom: 1px solid var(--rir-arrival);
+    border-right: 1px solid var(--rir-arrival);
+
+    &.day-prev-month,
+    &.day-next-month {
+      opacity: 0.48;
+    }
+  }
+
+  &__day-num {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    & > span {
+      font-size: 16px;
+      line-height: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      padding: 14px 18px 6px;
+      border-radius: 50%;
+      color: var(--rir-titanic);
+      opacity: .48;
+    }
+  }
+}

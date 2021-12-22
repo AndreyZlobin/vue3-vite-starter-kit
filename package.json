@@ -1,0 +1,86 @@
+{
+  "name": "worker-front",
+  "author": "Злоибн Андрей Сергеевич <zlobin.andy@gmail.com>",
+  "version": "0.9.0",
+  "private": true,
+  "scripts": {
+    "dev": "vite --host --port 5000",
+    "build": "vite build",
+    "serve": "vite preview",
+    "lint": "eslint . --ext .js,.ts,.vue",
+    "lint:fix": "eslint \"./src/**\" --fix --color. --ext .js,.jsx,.ts,.tsx,.vue",
+    "test": "jest",
+    "test:watch": "jest --watch"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "src/**/*.{js,jsx,ts,tsx,json,scss,vue}": [
+      "prettier --write",
+      "eslint --fix src/",
+      "git add"
+    ]
+  },
+  "dependencies": {
+    "@vueuse/core": "^6.0.0",
+    "axios": "^0.21.1",
+    "vue": "^3.2.7",
+    "vue-router": "^4.0.11",
+    "vuedraggable": "^4.1.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.15.8",
+    "@headlessui/vue": "^1.4.0",
+    "@heroicons/vue": "^1.0.3",
+    "@iconify/json": "^1.1.412",
+    "@tailwindcss/aspect-ratio": "^0.2.1",
+    "@tailwindcss/forms": "^0.3.3",
+    "@tailwindcss/line-clamp": "^0.2.1",
+    "@tailwindcss/typography": "^0.4.1",
+    "@types/jest": "^27.0.2",
+    "@types/lodash": "^4.14.178",
+    "@types/nprogress": "^0.2.0",
+    "@types/tailwindcss": "^2.2.1",
+    "@typescript-eslint/eslint-plugin": "^4.30.0",
+    "@typescript-eslint/parser": "^4.30.0",
+    "@vitejs/plugin-vue": "^1.4.0",
+    "@vue/compiler-sfc": "^3.2.2",
+    "@vue/eslint-config-prettier": "^6.0.0",
+    "@vue/eslint-config-typescript": "^7.0.0",
+    "@vue/test-utils": "^2.0.0-rc.15",
+    "@windicss/plugin-scrollbar": "^1.2.3",
+    "autoprefixer": "^10.3.1",
+    "babel-jest": "^27.2.4",
+    "eslint": "^7.32.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^3.4.1",
+    "eslint-plugin-vue": "^7.17.0",
+    "husky": "^7.0.2",
+    "jest": "^27.2.4",
+    "less": "^4.1.1",
+    "lint-staged": "^11.1.2",
+    "lodash": "^4.17.21",
+    "node-sass": "^6.0.1",
+    "nprogress": "^0.2.0",
+    "prettier": "^2.4.1",
+    "sass": "^1.42.1",
+    "sass-loader": "^12.1.0",
+    "tailwindcss": "^2.2.16",
+    "ts-jest": "^27.0.5",
+    "typescript": "^4.5.4",
+    "vite": "^2.5.6",
+    "vite-plugin-components": "^0.13.2",
+    "vite-plugin-icons": "^0.6.5",
+    "vite-plugin-pages": "^0.17.4",
+    "vite-plugin-pwa": "^0.11.2",
+    "vite-plugin-svg-icons": "^1.0.4",
+    "vite-plugin-vue-layouts": "^0.4.1",
+    "vite-plugin-windicss": "^1.2.8",
+    "vue-eslint-parser": "^7.10.0",
+    "vue-jest": "^5.0.0-alpha.10",
+    "vue3-jest": "^27.0.0-alpha.1"
+  }
+}
