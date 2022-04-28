@@ -38,7 +38,7 @@
     "@iconify/json": "^1.1.412",
     "@tailwindcss/aspect-ratio": "^0.2.1",
     "@tailwindcss/forms": "^0.3.3",
-    "@tailwindcss/line-clamp": "^0.2.1",
+    "@tailwindcss/line-clamp": "^0.4.0",
     "@tailwindcss/typography": "^0.4.1",
     "@types/jest": "^27.0.2",
     "@types/lodash": "^4.14.178",
