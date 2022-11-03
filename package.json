@@ -34,7 +34,7 @@
   "devDependencies": {
     "@babel/core": "^7.15.8",
     "@headlessui/vue": "^1.4.0",
-    "@heroicons/vue": "^1.0.3",
+    "@heroicons/vue": "^2.0.13",
     "@iconify/json": "^1.1.412",
     "@tailwindcss/aspect-ratio": "^0.2.1",
     "@tailwindcss/forms": "^0.3.3",
